@@ -9,7 +9,9 @@ class Jogo:
 jogo1 = Jogo('Tetris', 'Puzzle', 'Atari')
 jogo2 = Jogo('God of War', 'Hack n Slash', 'PS2')
 jogo3 = Jogo('Mortal Kombat', 'Luta', 'PS2')
-lista = [jogo1, jogo2, jogo3]
+jogo4 = Jogo('Mario', 'Aventura', 'Super Nintendo')
+jogo5 = Jogo('FIFA', 'Futebol', 'PS4')
+lista = [jogo1, jogo2, jogo3, jogo4, jogo5]
 
 app = Flask(__name__)
 
@@ -19,7 +21,7 @@ def index():
 
 @app.route('/novo')
 def novo():
-    return render_template('novo.html', titulo='Novo Jogo')
+    return render_template('novo.html', titulo='Tela de Cadastro')
 
 @app.route('/criar', methods=['POST',])
 def criar():
