@@ -19,6 +19,11 @@ app = Flask(__name__)
 def index():
     return render_template('lista.html', titulo='Jogos', jogos=lista)
 
+@app.route('/dashboard')
+def dash():
+    return render_template('dashboard.html', titulo='Tela Inicial')
+
+
 @app.route('/novo')
 def novo():
     return render_template('novo.html', titulo='Tela de Cadastro')
