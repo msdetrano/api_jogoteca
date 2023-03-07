@@ -1,2 +1,1 @@
-# Jogoteca_Flask_Python
-# Commitando no projeto
+Projeto de HTML com Python/FLASK
