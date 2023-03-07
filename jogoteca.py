@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import sqlite3
 
 class Jogo:
     def __init__(self, nome, categoria, console):
@@ -12,6 +13,8 @@ jogo3 = Jogo('Mortal Kombat', 'Luta', 'PS2')
 jogo4 = Jogo('Mario', 'Aventura', 'Super Nintendo')
 jogo5 = Jogo('FIFA', 'Futebol', 'PS4')
 lista = [jogo1, jogo2, jogo3, jogo4, jogo5]
+
+
 
 app = Flask(__name__)
 
@@ -33,8 +36,12 @@ def criar():
     nome = request.form['nome']
     categoria = request.form['categoria']
     console = request.form['console']
-    jogo = Jogo(nome, categoria, console)
-    lista.append(jogo)
+    
+    conn = sqlite3.connect('database.db')
+    cur = conn.cursor()
+    cur.execute("INSERT INTO users (nome, categoria, console) VALUES (?, ?, ?)", (nome, categoria, console))
+    conn.commit()
+    conn.close()
     return render_template('lista.html', titulo='Jogos', jogos=lista)
 
 app.run(debug=True)
