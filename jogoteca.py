@@ -23,7 +23,7 @@ def index():
 
     
 
-@app.route('/dashboard')
+@app.route('/home')
 def dash():
     return render_template('dashboard.html', titulo='Tela Inicial')
 

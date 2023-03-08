@@ -7,33 +7,133 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <title>DashBoard</title>
     <style>
-    
-    body {
-        background-image: linear-gradient(to right, #48c6ef, #6f86d6);
-        }
-  
-
-    header {
-      width: 100%;
-      height: 50px;
-      background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    }
+      body{
+        margin: 0;
+        padding: 0;
+      }
       
+      #stripes{
+      width:100%;
+      height: 100%;
+      overflow: hidden;
+      transform-origin: 0;
+      transform: skewY(-12deg);
+      background: -webkit-linear-gradient(300deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+      background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+      
+      }
+      
+      #stripes, #stripes span{
+        position: absolute;
+      }
+      
+      #stripes span{
+        height: 40px;
+      }
+      
+      #stripes :nth-child(1){
+        width: 50%;
+        left: 50%;
+        top:40px;
+        background:#4c29ff;
+      }
+      
+      #stripes :nth-child(2){
+        width: 14%;
+        right: 0;
+        bottom:40px;
+        background: #2be7ff;
+      }
+      
+      #stripes :nth-child(3){
+        width: 25%;
+        bottom: 0;
+        right: 0;
+        background: #a1ffc8;
+      }
+      
+      @media (min-width:670px){
+        #stripes span{
+          height:150px;
+        }
+        #stripes :nth-child(1){
+          top: 0;
+        }
+        #stripes :nth-child(2){
+          width: 16.66667%;
+          top: 300px;
+          bottom: auto;
+          background: #0dcfff;
+        }
+        #stripes :nth-child(3){
+          width: 33.33333%;
+          right: auto;
+          background: #11bdff;
+        }
+      }
+      
+      @media (min-width: 880px){
+        #stripes span{
+          height: 190px;
+        }
+      
+        #stripes :nth-child(1){
+          width: 33.33333%;
+          left: -16.66666%;
+          background: #53f;
+        }
+      
+        #stripes :nth-child(2){
+          width: 33.33333%;
+          top: 0;
+          left: 16.66666%;
+          right: auto;
+          background: #4553ff;
+        }
+      
+        #stripes :nth-child(3){
+          width: 33.33333%;
+          left: 49.99999%;
+          bottom: auto;
+          background: #4f40ff;
+        }
+      
+        #stripes :nth-child(4){
+          width: 33.33333%;
+          top: 380px;
+          right: -16.66666%;
+          background: #25ddf5;
+        }
+      
+        #stripes :nth-child(5){
+          width: 33.33333%;
+          bottom: 0;
+          background: #1fa2ff;
+        }
+      }
     </style>
   </head>
-  <body style="font-family:Helvetica">
-    <header class='topo'>  
-          
-      <h1 style="text-align:center; color:white; font-size: 42px;"> <b>{{ titulo }}</b></h1>
-             
-    </header> 
-       
-       
-        <div>            
-          <img id="gm" src="static/img/gm.png" width=30%>
-          
-        </div> 
-        
-   
+  <body>
+    <div>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-dark">Dark</button>
+
+      <button type="button" class="btn btn-link">Link</button>
+    </div>
+    
+ 
+
+
+    
+    
+    <!-- This pen is Stripe.com's stripped
+     down hero for educational purposes -->
+    
   </body>
 </html>
