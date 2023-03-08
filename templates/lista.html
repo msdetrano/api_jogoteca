@@ -27,11 +27,11 @@
                 </tr>
             </thead>
             <tbody>
-                {% for jogo in jogos %}
+                {% for linha in resultado  %}
                 <tr>
-                    <td style="color: yellow">{{ jogo.nome }}</td>
-                    <td style="color: yellow">{{ jogo.categoria }}</td>
-                    <td style="color: yellow">{{ jogo.console }}</td>
+                    <td style="color: yellow">{{ linha[0] }}</td>
+                    <td style="color: yellow">{{ linha[1] }}</td>
+                    <td style="color: yellow">{{ linha[2] }}</td>
                 </tr>
                 {% endfor %}
 
