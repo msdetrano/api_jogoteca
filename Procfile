@@ -1,1 +1,1 @@
-web: gunicorn jogoteca:app
+web: gunicorn 'jogoteca.py'
