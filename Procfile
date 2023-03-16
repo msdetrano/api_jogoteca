@@ -1,1 +1,1 @@
-web: gunicorn 'jogoteca.py'
+web: gunicorn api/api:app
