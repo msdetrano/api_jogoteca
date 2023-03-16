@@ -21,12 +21,6 @@ def index():
     cursor.close()
     return render_template('lista.html',titulo='Jogos', resultado=resultado)
 
-    
-
-@app.route('/home')
-def dash():
-    return render_template('dashboard.html', titulo='Tela Inicial')
-
 
 @app.route('/novo')
 def novo():
@@ -45,4 +39,4 @@ def criar():
     conn.close()
     return index()
 
-app.run(debug=True)
+app.run(port=80, host='0.0.0.0',debug=True)
