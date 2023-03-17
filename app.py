@@ -24,7 +24,7 @@ def index():
 
 @app.route('/novo')
 def novo():
-    return render_template('novo.html', titulo='Tela de Cadastro')
+    return render_template('novo.html', titulo='JogoTeca - Cadastro')
 
 @app.route('/criar', methods=['POST',])
 def criar():
