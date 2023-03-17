@@ -19,7 +19,7 @@ def index():
     cursor.execute('SELECT * FROM users')
     resultado = cursor.fetchall()
     cursor.close()
-    return render_template('lista.html',titulo='Jogos', resultado=resultado)
+    return render_template('lista.html',titulo='Catálogo de Jogos', resultado=resultado)
 
 
 @app.route('/novo')
